@@ -131,43 +131,6 @@ int main() {
 		
 	}
 	
-	/*
-	char recvbuf[DEFAULT_BUFLET];
-	int recvbuflen = DEFAULT_BUFLET;
-	int iSendResult = NULL;
-
-	do {
-		iResult = recv(ClientSock, recvbuf, recvbuflen, 0);
-		if (iResult > 0) {
-			cout << "recv succesful" << endl;
-			cout << recvbuf << endl;
-
-			iSendResult = send(ClientSock, recvbuf, iResult, 0);
-			if (iSendResult == SOCKET_ERROR) {
-				cout << "send fail" << endl;
-				closesocket(ClientSock);
-				freeaddrinfo(addrResult);
-				WSACleanup();
-				return 1;
-			}
-			cout << "Byte send: " << iSendResult << endl;
-
-		}
-		else if (iResult == 0)
-			cout << "Connection closing..." << endl;
-		else {
-			cout << "recv fail" << endl;
-			closesocket(ClientSock);
-			freeaddrinfo(addrResult);
-			WSACleanup();
-			return 1;
-		}
-
-	} while (iResult > 0);
-
-	closesocket(ClientSock);
-	WSACleanup();
-	*/
 
 
 	closesocket(ServerSock);
